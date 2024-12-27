@@ -1,0 +1,427 @@
+/* Avinaash style for sign in */
+/*10/12/24*/
+html{
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 12pt;
+    color: #000000;
+    text-align: center;
+}
+
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif; /* Default font */
+    background: linear-gradient(180deg, #D29B8C 15%, #E0D0B4 65%, #DFBE85 100%); /* Background gradient */
+    background-size: 100%; /* Ensure the background size fills properly */
+    background-repeat: no-repeat; /* Prevent repeating of the background */
+    min-height: 100vh; /* Ensure the background fills the entire viewport */
+    color: #000000;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1{
+    font-family: 'playfair display';
+    font-style: italic;
+}
+p{
+    font-family: 'playfair display';
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper {
+    background-color: #F5E8D7; /* Light background for form */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    flex-grow: 1; /* Allow the wrapper to grow to fill available space */
+    margin-top: 150px; /* Ensure the wrapper doesn't overlap with the fixed header */
+    margin-bottom: 80px; /* Ensure the wrapper is above the footer */
+    height: auto;
+    box-sizing: border-box;
+}
+
+form{
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+form input {
+    width: 150%;
+    padding: 1em;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    transition: 150ms ease;
+}
+
+form input:hover{
+    border: 2px solid;
+}
+
+form .checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-right: 10px;
+}
+
+form input[type="checkbox"] {
+    display: flex;
+    align-items: left;
+    justify-content: flex-start;
+    width: 5%;
+    margin-right: 10px; 
+}
+
+form input[type="submit"] {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    background-color: #7e5a6d; /* Background color for the button */
+    color: white; /* Button text color */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+form input[type="submit"]:hover{
+    background-color: #4A2E2B;
+}
+
+/* Header */
+header {
+    position: fixed;
+    background-color: linear-gradient(180deg, #D29B8C 15%, #E0D0B4 65%, #DFBE85 100%); /* Header background */
+    padding: 0.1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.2s ease-in-out;
+}
+
+header.scrolled{
+    background-color: #432B1F;
+    opacity: 0.98;
+}
+
+footer{
+    background-color: #432B1F;
+    position:fixed;
+    bottom: 0;
+    padding: 0.1rem;
+    left: 0;
+    right: 0;
+    color: white;
+}
+
+form p{
+    text-align: right;
+    margin-right: 100px;
+}
+
+form a{
+    text-decoration: none;
+    color: #5b2b2b;
+}
+
+form a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Make form and page responsive */
+@media (max-width: 768px) {
+    /* Adjust the wrapper's margin for smaller screens */
+    .wrapper {
+        margin-top: 60px; /* Reduce space above the form */
+        margin-bottom: 60px; /* Reduce space below the form */
+    }
+
+    form{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+    /* Adjust padding for form inputs and buttons on smaller screens */
+    form input {
+        padding: 10px;
+    }
+
+    form input[type="submit"] {
+        padding: 10px;
+    }
+}
+
+form div.incorrect label{
+    color: red;
+}
+
+form div.incorrect input{
+    border-color: red;
+}
+
+p #error-message {
+    color: red !important;
+    font-weight: bold !important;
+}
+
+/* Ending for Sign Up page */
+
+/* Icon Container */
+.icon-container {
+    margin-left: 15px; /* Adds spacing between the menu items and icons */
+}
+
+/* Icon Button */
+.icon-button {
+    display: inline-block; /* Ensure the link is inline */
+    padding: 10px;
+}
+
+/* Image Styling */
+.icon-img {
+    width: 25px; /* Adjust size of icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.icon-button:hover .icon-img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .icon-container {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #432B1F;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #5b2b2b;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Navigation */
+
+nav {
+    width: 100%;
+    background-color: #D29B8C; /* Distinct background color for nav */
+    padding: 2px 0; /* Add some padding to the nav */
+    position: fixed; /* Fix the position of the nav */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li.logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+header .logo {
+    width: 250px;
+    height: 101.12px;
+    background: url('../images/Logo.png') no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    transition: background-image 0.2s ease-in-out;
+}
+
+/* Joanna look at this section for the logo change */
+header .logo.scrolled{
+    width: 250px;
+    height: 101.12px;
+    background: url('../images/logo2.png') no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* Button Styles */
+.button {
+    margin: 0 10px; /* Add horizontal spacing between buttons */
+    padding: 10px 20px;
+    background-color: #5b2b2b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensure links look like buttons */
+}
+
+.button:hover {
+    background-color: #432B1F;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Keep the vertical spacing as it is */
+}
+
+/* Center "One bite is never enough..." text */
+.hero p {
+    text-align: center; /* Center the text horizontally */
+    margin-top: 20px; /* Optional: Add some spacing above the text */
+    font-size: 1.2em; /* Optional: Adjust font size */
+    color: #4A2E2B; /* Optional: Adjust color to match design */
+    font-style: italic; /* Optional: Add italic style for emphasis */
+}
+
+/* Carousel container */
+.carousel {
+    position: relative;
+    max-width: 20%; /* Constrain width of carousel */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Carousel inner container */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel item */
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%; /* Fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px; /* Rounded edges */
+}
+
+/* Carousel controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .carousel {
+        max-width: 90%; /* Adjust carousel width on smaller screens */
+    }
+}

@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Adjust this value based on the height of your nav */
+    font-family: 'Montserrat', sans-serif; /* Default font */
+    background: linear-gradient(180deg, #D29B8C 15%, #E0D0B4 65%, #DFBE85 100%); /* Background gradient */
+    color: #3a3a3a;
+}
+
+/* Header */
+header {
+    background-color: #432B1F; /* Header background */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    background-color: #D29B8C; /* Distinct background color for nav */
+    padding: 2px 0; /* Add some padding to the nav */
+    position: fixed; /* Fix the position of the nav */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+    font-weight: 600; /* Font weight */
+    line-height: 29.26px; /* Line height */
+    text-align: center; /* Text alignment */
+    text-underline-position: from-font; /* Underline position */
+    text-decoration-skip-ink: none; /* Decoration skip ink */
+    color: #432B1F; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li.logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Content */
+main {
+    margin-top: 60px; /* Adjust this value based on the height of your nav */
+}
+
+
+/* Icon Container */
+.icon-container {
+    margin-left: 15px; /* Adds spacing between the menu items and icons */
+}
+
+/* Icon Button */
+.icon-button {
+    display: inline-block; /* Ensure the link is inline */
+    padding: 10px;
+}
+
+/* Image Styling */
+.icon-img {
+    width: 25px; /* Adjust size of icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.icon-button:hover .icon-img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #432B1F;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #5b2b2b;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Logo */
+header .logo {
+    width: 200px;
+    height: 80.896px;
+    background: url('../images/Logo.png') no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    color: #4A2E2B;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+    margin: 0 10px; /* Add horizontal spacing between buttons */
+    padding: 10px 20px;
+    background-color: #5b2b2b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Ensure links look like buttons */
+}
+
+.button:hover {
+    background-color: #432B1F;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px; /* Keep the vertical spacing as it is */
+}
+
+/* Footer */
+footer {
+    background-color: #432B1F;
+    padding: 1em 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .carousel {
+        max-width: 90%; /* Adjust carousel width on smaller screens */
+    }
+}

@@ -1,0 +1,214 @@
+/* Hero Section */
+
+.hero {
+    padding: 20px 0; /* Reduce padding to make the section smaller */
+    text-align: center; /* Center align text */
+}
+
+.hero h1 {
+    font-family: 'Abril Fatface', cursive; /* Apply Abril Fatface font */
+    font-size: 48px; /* Reduce font size */
+    font-weight: 400; /* Set font weight */
+    line-height: 64px; /* Adjust line height */
+    color: #4A2E2B; /* Set text color */
+    width: 80%; /* Increase width to make the text more compact */
+    margin: 0 auto; /* Center the element horizontally */
+}
+
+.hero p {
+    font-family: 'Playfair Display', serif; /* Apply Playfair Display font */
+    font-size: 30px; /* Reduce font size */
+    font-style: italic; /* Set italic style */
+    font-weight: 500; /* Set font weight */
+    line-height: 28px; /* Adjust line height */
+    color: #4A2E2B; /* Set text color */
+}
+
+/* Carousel Section */
+
+.carousel {
+    position: relative;
+    max-width: 30%; /* Constrain width of the carousel */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the carousel */
+    border-radius: 10px; /* Rounded edges */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.carousel-inner {
+    display: flex; /* Use flexbox for items */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+.carousel-item {
+    flex: 0 0 100%; /* Each item takes up full width */
+    text-align: center; /* Center align content */
+}
+
+.carousel-item img {
+    width: 100%; /* Fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.carousel-caption {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    color: #4A2E2B; /* Set text color */
+    text-align: center; /* Center align captions */
+    padding: 10px; /* Add padding */
+    border-radius: 10px; /* Rounded edges */
+    margin-top: 10px; /* Add margin above */
+}
+
+.carousel-caption h3 {
+    font-size: 24px; /* Set font size for title */
+    font-weight: 600; /* Set font weight */
+    margin: 0 0 5px 0; /* Add spacing below title */
+}
+
+.carousel-caption p {
+    font-size: 16px; /* Set font size for description */
+    margin: 0; /* Remove default margin */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent background */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    font-size: 24px; /* Set font size */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 2; /* Ensure controls are above content */
+    padding: 10px; /* Add padding */
+    border-radius: 50%; /* Make controls circular */
+    transition: background-color 0.3s ease; /* Add hover effect */
+}
+
+.carousel-control.prev {
+    left: 10px; /* Position previous button */
+}
+
+.carousel-control.next {
+    right: 10px; /* Position next button */
+}
+
+.carousel-control:hover {
+    background-color: #432b1f; /* Darken background on hover */
+}
+
+/* Video Section */
+
+.video-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align content */
+    align-items: center; /* Center align vertically */
+    margin: 50px 0; /* Add spacing around section */
+}
+
+.video-content {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Add spacing between elements */
+    align-items: center; /* Center align vertically */
+    justify-content: center; /* Center align horizontally */
+}
+
+.video-container {
+    flex: 1; /* Allow container to take up equal space */
+    position: relative; /* Relative positioning for iframe */
+    padding-bottom: 40%; /* Maintain 9:16 aspect ratio */
+    height: 0; /* Set height to 0 for aspect ratio */
+    max-width: 50%; /* Adjust this to make the video smaller */
+    overflow: hidden; /* Hide overflow content */
+    background: #000; /* Set background color */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.video-container iframe {
+    position: absolute; /* Absolute positioning inside container */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.video-description {
+    flex: 1; /* Allow description to take up equal space */
+    text-align: left; /* Left-align text */
+}
+
+.video-description h2 {
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font */
+    font-size: 72px; /* Set font size */
+    font-style: italic; /* Make the text italic */
+    font-weight: 600; /* Set font weight */
+    color: #4A2E2B; /* Set text color */
+}
+
+.video-description p {
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    font-size: 36px; /* Set font size */
+    color: #4A2E2B; /* Set text color */
+    margin: 10px 0; /* Add spacing below paragraphs */
+}
+
+
+/*Button Section*/
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4A2E2B; /* A nice standout color */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c50; /* Slightly darker shade on hover */
+}
+
+
+/*Map Section*/
+
+.map-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.map-section h2 {
+    font-family: 'Playfair Display', serif; /* Use Playfair Display font */
+    font-size: 36px; /* Set font size */
+    font-style: italic; /* Make the text italic */
+    font-weight: 600; /* Set font weight */
+    color: #4A2E2B; /* Set text color */
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #432B1F; /* Set background color */
+    color: #fff; /* Set text color */
+    padding: 10px; /* Add padding around content */
+}

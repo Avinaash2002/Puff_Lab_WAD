@@ -1,0 +1,70 @@
+html{
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-size: 12pt;
+    color: #000000;
+    text-align: center;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif; /* Default font */
+    background: linear-gradient(180deg, #D29B8C 15%, #E0D0B4 65%, #DFBE85 100%); /* Background gradient */
+    background-size: 100%; /* Ensure the background size fills properly */
+    background-repeat: no-repeat; /* Prevent repeating of the background */
+    min-height: 100vh; /* Ensure the background fills the entire viewport */
+    color: #000000;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer{
+    background-color: #432B1F;
+    position:fixed;
+    bottom: 0;
+    padding: 0.6rem;
+    left: 0;
+    right: 0;
+    color: white;
+}
+
+
+.table-container {
+
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #F5C8A1;
+    font-weight: bold;
+}
+
+table td {
+    color: #3B2C29;
+}
+
+table tr:hover {
+    background-color: #F1F1F1;
+}

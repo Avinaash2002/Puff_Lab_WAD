@@ -1,0 +1,250 @@
+/* Avinaash style for sign in */
+/*10/12/24*/
+html{
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 12pt;
+  color: #000000;
+  text-align: center;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: 'playfair display';
+  font-style: italic;
+}
+p{
+  font-family: 'playfair display';
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+}
+
+.wrapper {
+  background-color: #F5E8D7;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  text-align: center;
+  margin: 150px auto 80px auto; /* Center horizontally and add vertical margins */
+  height: auto;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+
+form{
+  width: min(400px, 100%);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form label{
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+form input {
+  width: 150%; 
+  padding: 1em;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  transition: 150ms ease;
+}
+
+
+form input:hover{
+  border: 2px solid;
+}
+
+form .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-right: 10px;
+}
+
+form input[type="checkbox"] {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  width: 5%;
+  margin-right: 10px; 
+}
+
+form input[type="submit"] {
+  width: 50%;
+  padding: 12px;
+  border: none;
+  background-color: #7e5a6d; /* Background color for the button */
+  color: white; /* Button text color */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+form input[type="submit"]:hover{
+  background-color: #4A2E2B;
+}
+
+form p{
+  text-align: right;
+  margin-right: 100px;
+}
+
+form a{
+  text-decoration: none;
+  color: #5b2b2b;
+}
+
+form a:hover{
+  text-decoration: underline;
+  color: blue;
+}
+
+/* Make form and page responsive */
+@media (max-width: 768px) {
+  /* Adjust the wrapper's margin for smaller screens */
+  .wrapper {
+      margin-top: 60px; /* Reduce space above the form */
+      margin-bottom: 60px; /* Reduce space below the form */
+  }
+
+  form{
+      margin-top: 60px;
+      margin-bottom: 60px;
+  }
+  
+  /* Adjust padding for form inputs and buttons on smaller screens */
+  form input {
+      padding: 10px;
+  }
+
+  form input[type="submit"] {
+      padding: 10px;
+  }
+}
+
+form div.incorrect label{
+  color: red;
+}
+
+form div.incorrect input{
+  border-color: red;
+}
+
+.toggle-password {
+  font-size: 14px;
+  color: #5b2b2b; /* Link color */
+  text-decoration: underline;
+  cursor: pointer;
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  font-family: inherit; /* Keep font consistent */
+}
+
+/* Hover effect */
+.toggle-password:hover {
+  color: #4a2e2b; /* Slightly darker color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.password-toggle-icon {
+  position: absolute;
+  bottom: 5%;
+  left: 250px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.password-toggle-icon i {
+  font-size: 18px;
+}
+
+.password-toggle-icon i:hover {
+  color: #333;
+}
+
+.user-box {
+  position: relative; /* Allows absolute positioning of child elements */
+  margin-bottom: 15px;
+}
+
+.user-box input {
+  width: 150%; 
+  padding: 1em; 
+  border: 1px solid #ccc;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  border-radius: 5px;
+}
+
+.user-box label {
+  width: 100%;
+  margin-bottom: 0.5px;
+  font-size: 14px;
+  display: block;
+  text-align: left;
+  transition: 0.5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #333;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close-button:hover, .close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
